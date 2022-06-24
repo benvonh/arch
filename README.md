@@ -1,14 +1,13 @@
 # arch
 
-## Install
+Installs my desktop environment (. _ .)
 
-```BASH
-sudo pacman -S xorg-server xorg-xinit xorg-xrandr xorg-xsetroot xorg-xrdb
-sudo pacman -S libx11 libxft libxinerama
-```
+## Usage
 
-```BASH
-git clone git://git.suckless.org/dwm
-cd dwm
-sudo make install
+Clone this repository and run the script >>>
+
+```SH
+git clone https://github.com/benvonh/arch
+cd arch
+./setup.sh
 ```
