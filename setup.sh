@@ -2,7 +2,7 @@
 
 # Install YAY
 mkdir -p ~/repos
-git clone https://aur.archlinux.org/yay ~/repos
+git clone https://aur.archlinux.org/yay ~/repos/yay
 cd ~/repos/yay
 makepkg -si
 
