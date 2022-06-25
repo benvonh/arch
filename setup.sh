@@ -2,7 +2,7 @@
 
 sudo pacman -S xorg xorg-xinit
 sudo pacman -S awesome zsh zsh-completions
-sudo pacman -S ttf-dejavu rofi kitty xterm neovim
+sudo pacman -S ttf-dejavu rofi kitty neovim
 
 if [ ! -f ~/.xinitrc ]; then
     touch ~/.xinitrc
