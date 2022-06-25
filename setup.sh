@@ -1,24 +1,24 @@
 #!/bin/sh
 
-# Install YAY
-mkdir -p ~/repos
-git clone https://aur.archlinux.org/yay ~/repos/yay
-cd ~/repos/yay
-makepkg -si
+sudo pacman -S xorg xorg-xinit
+sudo pacman -S awesome zsh zsh-completions
+sudo pacman -S ttf-dejavu rofi kitty neovim
 
-# Install packages
-yay -S xorg xorg-xinit awesome ttf-dejavu rofi kitty brave neovim insync
+if [ ! -f ~/.xinitrc ]; then
+    touch ~/.xinitrc
+fi
+if [ ! -f ~/.zprofile ]; then
+    touch ~/.zprofile
+fi
 
-# Finish
+echo "exec awesome" >> ~/.xinitrc
+echo "startx" >> ~/.zprofile
+
 echo
-echo 'Installation complete!'
-echo '----------------------'
-echo 'The system will reboot now.'
-echo 'After logging back in:'
+echo "######################"
+echo " SET NEW SHELL TO ZSH "
+echo "######################"
 echo
-echo '    1) Run `insync start`'
-echo '    2) Run `./link.sh`'
-echo
-echo "Hint: Sync folders to $HOME/insync/"
-sleep 10
-sudo reboot
+chsh $USER
+
+echo "Done"
