@@ -12,7 +12,7 @@ git clone https://aur.archlinux.org/yay ~/repos/yay
 cd ~/repos/yay
 makepkg -si
 
-yay -S catppuccin-gtk-theme insync ly
+yay -S catppuccin-gtk-theme brave insync ly
 
 sudo systemctl enable ly
 sudo systemctl disable getty@tty2
