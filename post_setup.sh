@@ -14,6 +14,9 @@ makepkg -si
 
 yay -S catppuccin-gtk-theme insync ly
 
+sudo systemctl enable ly
+sudo systemctl disable getty@tty2
+
 echo
 echo "#############################"
 echo " RUN INSYNC TO SYNC DOTFILES "
