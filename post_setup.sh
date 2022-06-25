@@ -1,6 +1,6 @@
 #!/bin/sh
 
-sudo pacman -S --needed git base-devl
+sudo pacman -S --needed git base-devel
 
 if [ -d ~/repos/yay ]; then
     rm -rf ~/repos/yay
@@ -9,7 +9,7 @@ else
 fi
 
 git clone https://aur.archlinux.org/yay ~/repos/yay
-cd yay
+cd ~/repos/yay
 makepkg -si
 
 yay -S catppuccin-gtk-theme insync ly
