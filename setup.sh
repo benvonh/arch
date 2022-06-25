@@ -18,6 +18,10 @@ if ! cat ~/.zprofile | grep 'startx'; then
     echo "startx" >> ~/.zprofile
 fi
 
+mkdir -p ~/.config/awesome
+cp /etc/xdg/awesome/rc.lua ~/.config/awesome/rc.lua
+sed -i 's/xterm/kitty/g' ~/.config/awesome/rc.lua
+
 echo
 echo "######################"
 echo " SET NEW SHELL TO ZSH "
