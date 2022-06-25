@@ -13,3 +13,10 @@ cd ~/repos/yay
 makepkg -si
 
 yay -S catppuccin-gtk-theme insync ly
+
+echo
+echo "#############################"
+echo " RUN INSYNC TO SYNC DOTFILES "
+echo "#############################"
+echo
+echo "Done"
