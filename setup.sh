@@ -11,8 +11,12 @@ if [ ! -f ~/.zprofile ]; then
     touch ~/.zprofile
 fi
 
-echo "exec awesome" >> ~/.xinitrc
-echo "startx" >> ~/.zprofile
+if ! cat ~/.xinitrc | grep 'exec'; then
+    echo "exec awesome" >> ~/.xinitrc
+fi
+if ! cat ~/.zprofile | grep 'startx'; then
+    echo "startx" >> ~/.zprofile
+fi
 
 echo
 echo "######################"
